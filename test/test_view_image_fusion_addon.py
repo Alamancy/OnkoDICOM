@@ -65,4 +65,21 @@ def test_dict_setting_values(test_object):
     for key in test_object.dict:
         dummy_UI.set_value(key, test_object.dict[key])
 
-    assert dummy_UI.dict == test_object.dict
+    assert dummy_UI.add_on_window.dict["reg_method"] == \
+        test_object.dict["reg_method"]
+    assert dummy_UI.add_on_window.self.dict["metric"] == \
+        test_object.dict["metric"]
+    assert dummy_UI.add_on_window.self.dict["optimiser"] == \
+        test_object.dict["optimiser"]
+    assert dummy_UI.add_on_window.self.dict["shrink_factors"] == \
+        test_object.dict["shrink_factors"]
+    assert dummy_UI.add_on_window.self.dict["smooth_sigmas"] == \
+        test_object.dict["smooth_sigmas"]
+    assert dummy_UI.add_on_window.self.dict["sampling_rate"] == \
+        test_object.dict["sampling_rate"]
+    assert dummy_UI.add_on_window.self.dict["final_interp"] == \
+        test_object.dict["final_interp"]
+    assert dummy_UI.add_on_window.self.dict["number_of_iterations"] == \
+        test_object.dict["number_of_iterations"]
+    assert dummy_UI.add_on_window.self.dict["default_number"] == \
+        test_object.dict["default_number"]
